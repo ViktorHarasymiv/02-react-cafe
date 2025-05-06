@@ -1,6 +1,6 @@
 import css from "./VoteOptions.module.css";
 
-import type { OptionsProps } from "../Types/types";
+import type { OptionsProps } from "../../types/types";
 
 function Options({ click, totalValue, reset }: OptionsProps) {
   return (

@@ -1,6 +1,6 @@
 import css from "./VoteStats.module.css";
 
-import type { FeedbackProps } from "../Types/types";
+import type { FeedbackProps } from "../../types/types";
 
 function Feedback({ review, totalValue }: FeedbackProps) {
   return (
