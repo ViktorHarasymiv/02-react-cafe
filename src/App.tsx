@@ -5,7 +5,6 @@ import style from "./App.module.css";
 import Description from "./components/Description/Description.tsx";
 import Options from "./components/Options/Options.tsx";
 import Feedback from "./components/Feedback/Feedback.tsx";
-
 import Notification from "./components/Notification/Notification.tsx";
 
 import type { Votes } from "./types/types.ts";
