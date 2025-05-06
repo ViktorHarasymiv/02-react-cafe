@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 
 import style from "./App.module.css";
 
-import Description from "./Components/Description/Description.tsx";
-import Options from "./Components/Options/Options.tsx";
-import Feedback from "./Components/Feedback/Feedback.tsx";
+import Description from "./components/Description/Description.tsx";
+import Options from "./components/Options/Options.tsx";
+import Feedback from "./components/Feedback/Feedback.tsx";
 
-import Notification from "./Components/Notification/Notification.tsx";
+import Notification from "./components/Notification/Notification.tsx";
 
 import type { Votes } from "./types/types.ts";
 
