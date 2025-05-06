@@ -2,7 +2,7 @@ import css from "./VoteStats.module.css";
 
 import type { FeedbackProps } from "../../types/types";
 
-function Feedback({ review, totalValue }: FeedbackProps) {
+function VoteStats({ review, totalValue }: FeedbackProps) {
   return (
     <div className={css.container}>
       <span className={css.stat}>
@@ -30,4 +30,4 @@ function Feedback({ review, totalValue }: FeedbackProps) {
   );
 }
 
-export default Feedback;
+export default VoteStats;

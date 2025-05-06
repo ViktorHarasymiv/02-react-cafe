@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 import style from "./App.module.css";
 
-import Description from "../Description/Description.tsx";
-import Options from "../Options/Options.tsx";
-import Feedback from "../Feedback/Feedback.tsx";
+import CafeInfo from "../CafeInfo/CafeInfo.tsx";
+import VoteOptions from "../VoteOptions/VoteOptions.tsx";
+import Feedback from "../VoteStats/VoteStats.tsx";
 import Notification from "../Notification/Notification.tsx";
 
 import type { Votes } from "../../types/types.ts";
@@ -46,12 +46,12 @@ function App() {
 
   return (
     <div className={style.app}>
-      <Description></Description>
-      <Options
+      <CafeInfo></CafeInfo>
+      <VoteOptions
         click={updateFeedback}
         totalValue={totalFeedback}
         reset={resetFeedback}
-      ></Options>
+      ></VoteOptions>
       {totalFeedback >= 1 ? (
         <Feedback review={feedback} totalValue={totalFeedback}></Feedback>
       ) : (

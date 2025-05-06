@@ -2,7 +2,7 @@ import css from "./VoteOptions.module.css";
 
 import type { OptionsProps } from "../../types/types";
 
-function Options({ click, totalValue, reset }: OptionsProps) {
+function VoteOptions({ click, totalValue, reset }: OptionsProps) {
   return (
     <div className={css.container}>
       <button className={css.button} onClick={() => click("good")}>
@@ -23,4 +23,4 @@ function Options({ click, totalValue, reset }: OptionsProps) {
   );
 }
 
-export default Options;
+export default VoteOptions;
