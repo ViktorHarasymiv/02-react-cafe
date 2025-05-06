@@ -7,7 +7,7 @@ import VoteOptions from "../VoteOptions/VoteOptions.tsx";
 import Feedback from "../VoteStats/VoteStats.tsx";
 import Notification from "../Notification/Notification.tsx";
 
-import type { Votes } from "../../types/types.ts";
+import type { Votes } from "../../types/votes.ts";
 
 function App() {
   const [feedback, setFeedback] = useState<Votes>(() => {
