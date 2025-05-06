@@ -14,5 +14,3 @@ export interface FeedbackProps {
   review: Votes;
   totalValue: number;
 }
-
-export interface NotificationProps {}
