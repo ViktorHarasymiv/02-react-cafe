@@ -1,33 +1,30 @@
 import css from "./VoteStats.module.css";
+import type { Votes } from "../../types/votes";
 
-import type { FeedbackProps } from "../../types/votes";
-
-function VoteStats({ review, totalValue }: FeedbackProps) {
-  return (
-    <div className={css.container}>
-      <span className={css.stat}>
-        <strong className={css.strong}>Good : {review.good}</strong>
-      </span>
-      <span className={css.stat}>
-        <strong className={css.strong}>Neutral : {review.neutral}</strong>
-      </span>
-      <span className={css.stat}>
-        <strong className={css.strong}>Bad : {review.bad}</strong>
-      </span>
-      <span className={css.stat}>
-        <strong className={css.strong}>Total : {totalValue}</strong>
-      </span>
-      <span className={css.stat}>
-        <strong className={css.strong}>
-          Positive:
-          {totalValue - review.neutral >= 1
-            ? Math.round((review.good / (review.good + review.bad)) * 100)
-            : "0"}
-          %
-        </strong>
-      </span>
-    </div>
-  );
+interface VoteStatsProps {
+  votes: Votes;
+  totalVotes: number;
+  positiveRate: number;
 }
+
+const VoteStats = ({ votes, totalVotes, positiveRate }: VoteStatsProps) => (
+  <div className={css.container}>
+    <p className={css.stat}>
+      Good: <strong>{votes.good}</strong>
+    </p>
+    <p className={css.stat}>
+      Neutral: <strong>{votes.neutral}</strong>
+    </p>
+    <p className={css.stat}>
+      Bad: <strong>{votes.bad}</strong>
+    </p>
+    <p className={css.stat}>
+      Total: <strong>{totalVotes}</strong>
+    </p>
+    <p className={css.stat}>
+      Positive: <strong>{positiveRate}%</strong>
+    </p>
+  </div>
+);
 
 export default VoteStats;

@@ -1,11 +1,11 @@
 import css from "./Notification.module.css";
 
-function Notification() {
+const Notification = () => {
   return (
-    <div className={css.message}>
-      <p>На даний момент відгуки відсутні !</p>
+    <div>
+      <p className={css.message}>No feedback yet</p>
     </div>
   );
-}
+};
 
 export default Notification;
